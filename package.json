@@ -1,0 +1,68 @@
+{
+  "name": "multibucket",
+
+  "version": "1.0.0",
+  "description": "A library to generate presigned URLs for multiple storage providers (AWS S3, Cloudflare R2) with load balancing",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node example/main.js"
+  },
+  "keywords": [
+    "presigned",
+    "url",
+    "s3",
+    "r2",
+    "cloudflare",
+    "load-balancing",
+    "storage",
+    "upload",
+    "multi-storage",
+    "multi-bucket",
+    "aws-sdk",
+    "cloudflare-r2",
+    "express",
+    "axios",
+    "chokidar",
+    "dotenv",
+    "multi-provider",
+    "multi-provider-presigner",
+    "multi-storage-presigner",
+    "multi-bucket-presigner",
+    "multi-storage-url",
+    "multi-bucket-url",
+    "multi-storage-upload",
+    "multi-bucket-upload",
+    "s3-presigner",
+    "r2-presigner",
+    "s3-upload",
+    "r2-upload",
+    "s3-url",
+    "r2-url",
+    "s3-multi-provider",
+    "r2-multi-provider",
+    "s3-multi-storage",
+    "r2-multi-storage"
+  ],
+  "author": "somen6562@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.6.4",
+    "supertest": "^6.3.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KTBsomen/multibucket.git"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.812.0",
+    "@aws-sdk/s3-request-presigner": "^3.812.0",
+    "axios": "^1.9.0",
+    "chokidar": "^4.0.3",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0"
+  }
+}

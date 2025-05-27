@@ -1,0 +1,27 @@
+{
+  "providers": [
+    {
+      "id": "s3-backup",
+      "type": "s3",
+      "bucket": "my-backup-bucket",
+      "region": "eu-west-1",
+      "accessKeyId": "AKIABACKUP",
+      "secretAccessKey": "backup-secret-key",
+      "rateLimit": 50,
+      "publicUrlBase": "https://backup-cdn.example.com"
+    },
+    {
+      "id": "r2-secondary",
+      "type": "r2",
+      "bucket": "my-secondary-r2",
+      "endpoint": "https://secondary-account.r2.cloudflarestorage.com",
+      "accessKeyId": "R2-SECONDARY-KEY",
+      "secretAccessKey": "r2-secondary-secret",
+      "publicUrlBase": "https://secondary-cdn.example.com",
+      "weight": 2
+    }
+  ],
+  "loadBalanceStrategy": "weighted-random",
+  "defaultExpiry": 7200,
+  "removeStaleProviders": false
+}
