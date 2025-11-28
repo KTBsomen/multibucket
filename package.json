@@ -1,9 +1,9 @@
 {
   "name": "multibucket",
-
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A library to generate presigned URLs for multiple storage providers (AWS S3, Cloudflare R2) with load balancing",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "test": "jest",
     "start": "node example/main.js"

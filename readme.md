@@ -17,6 +17,20 @@ A Node.js library for generating presigned URLs for multiple object storage prov
 npm install multibucket
 ```
 
+## TypeScript
+
+This package includes a minimal `index.d.ts` so TypeScript projects can import it with type information. Example:
+
+```ts
+import MultiBucket = require('multibucket');
+// or (with `esModuleInterop` enabled in tsconfig):
+// import MultiBucket from 'multibucket';
+
+const mb = new MultiBucket({ providers: [] });
+```
+
+If your TypeScript project still complains about missing types, you can either enable `esModuleInterop` in `tsconfig.json`, or, as a temporary workaround, add a declaration stub in the consuming project like `declare module 'multibucket';`.
+
 ## Dependencies
 
 This library requires the following dependencies:
