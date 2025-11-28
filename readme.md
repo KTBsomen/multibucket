@@ -250,6 +250,3 @@ const readUrlInfo = await storagePresigner.generateReadUrl({
 });
 ```
 
-## License
-
-MIT
