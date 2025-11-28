@@ -333,6 +333,7 @@ class MultiBucket {
    * 
    * @param {Object} options - Options for generating the presigned URL
    * @param {String} options.key - The object key
+   * @param {String} options.filename - The download filename (optional)
    * @param {String} options.bucket - The bucket name (optional if the key already includes provider info)
    * @param {String} options.providerId - Specific provider ID to use
    * @param {Number} options.expiry - Expiry time in seconds (optional, defaults to constructor value)
@@ -359,6 +360,8 @@ class MultiBucket {
       const command = new GetObjectCommand({
         Bucket: provider.bucket,
         Key: options.key,
+        ResponseContentDisposition: `attachment; filename="${options.filename || options.key.split('/').pop()}"`,
+
       });
 
       // Generate the presigned URL
